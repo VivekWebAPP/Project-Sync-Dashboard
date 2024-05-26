@@ -28,6 +28,7 @@
     "axios": "^1.3.4",
     "concurrently": "^8.2.2",
     "formik": "^2.2.9",
+    "nodemon": "^3.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
@@ -36,19 +37,19 @@
     "react-router-dom": "^6.23.1",
     "react-scripts": "5.0.1",
     "redux": "^5.0.1",
+    "serve": "^14.0.1",
     "thunk": "^0.0.1",
     "web-vitals": "^2.1.4",
-    "yup": "^1.0.2",
-    "serve": "^14.0.1"
+    "yup": "^1.0.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "serve": "serve -s build",  
-    "backend": "nodemon ./Backend/index.js", 
-    "both": "concurrently \"npm run build\" \"npm run backend\""  
+    "serve": "serve -s build",
+    "backend": "nodemon ./Backend/index.js",
+    "both": "concurrently \"npm run build\" \"npm run backend\""
   },
   "eslintConfig": {
     "extends": [

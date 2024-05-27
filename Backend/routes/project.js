@@ -1,7 +1,7 @@
 import express from 'express';
 import { body, validationResult } from 'express-validator';
 import ProductModel from '../models/ProjectDetailes.js';
-import findToken from '../Middleware/findToken.js';
+import findToken from '../middleware/findToken.js';
 
 const router = express.Router();
 

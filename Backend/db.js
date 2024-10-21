@@ -1,6 +1,8 @@
 import mongoose from "mongoose";
+import dotenv from 'dotenv';
 
-const connectionURL="mongodb+srv://vivekphadake17:Vivek%402019@projectsyncdashboardapp.4kvwwok.mongodb.net/Project_Sync_Dashboard";
+dotenv.config()
+const connectionURL=process.env.CONNECTION_STRING;
 
 const connectWithDatabase= async ()=>{
     try {

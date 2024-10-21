@@ -54,6 +54,7 @@ router.post("/createNewUser", [
 });
 
 router.post('/verifyUser', [
+  body('name').isString().isLength(5).withMessage('Enter a Valid Name'),
   body('email').isEmail().withMessage('Enter a valid email'),
   body('password').isLength({ min: 5 }).withMessage('Please Enter a valid password'),
 ], async (req, res) => {
@@ -63,14 +64,16 @@ router.post('/verifyUser', [
       return res.status(400).json({ errors: errors.array() });
     }
 
-    const { email, password } = req.body;
+    const {name, email, password } = req.body;
 
-    let user = await User.findOne({ email });
+    let user = await User.findOne({ email:req.body.email });
+
     if (!user) {
       return res.status(400).send('Invalid Email or Password');
     }
 
     const isMatched = bcrypt.compare(password, user.password);
+
     if (!isMatched) {
       return res.status(400).send('Invalid Email or Password');
     }
@@ -82,9 +85,11 @@ router.post('/verifyUser', [
     };
 
     const secret = "VivekKLEStudent";
+
     const jwtToken = jwt.sign(tokenData, secret);
 
     res.status(200).send({ jwtToken });
+
   } catch (error) {
     console.error("Errors occurred", error);
     res.status(500).send('Internal Server Error');

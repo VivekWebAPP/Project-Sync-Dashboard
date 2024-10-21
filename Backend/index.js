@@ -5,26 +5,25 @@ import router2 from './routes/project.js';
 import router3 from './routes/employer.js';
 import router4 from './routes/teacherRoute.js';
 import router5 from './routes/studentRoute.js';
-import cors from 'cors'
+import cors from 'cors';
+import dotenv from 'dotenv';
 
+
+dotenv.config();
 const app = express();
 
-// Parse incoming request bodies with JSON payloads
 app.use(express.json());
 
 app.use(cors());
 
-// Connect to the database
 connectWithDatabase();
 
-// Define routes
 app.use('/auth', router1);
 app.use('/project', router2);
 app.use('/employer', router3);
-app.use('/teacher',router4);
-app.use('/student',router5);
+app.use('/teacher', router4);
+app.use('/student', router5);
 
-// Define a simple root route
 app.get('/', (req, res) => {
     res.send("Hello World");
 });

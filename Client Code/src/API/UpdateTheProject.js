@@ -1,6 +1,6 @@
 export const updateEmployeerProject= async (token,id,ProjectName,ProjectType,ProjectPrice,FromDate,ToDate,StatusOfTheProject,Location,Priority)=>{
     try {
-        const response = await fetch(`http://localhost:5000/project/updateProject/${id}`, {
+        const response = await fetch(`https://project-sync-dashboard-backend.onrender.com/project/updateProject/${id}`, {
             method: "POST",
             mode: "cors",
             cache: "no-cache",
@@ -25,7 +25,7 @@ export const updateEmployeerProject= async (token,id,ProjectName,ProjectType,Pro
 
 export const updateEmployeeProject= async (token,id,ProjectName,ProjectType,ProjectPrice,FromDate,ToDate,StatusOfTheProject,Location,Priority)=>{
     try {
-        const response = await fetch(`http://localhost:5000/employer/updateProject/${id}`, {
+        const response = await fetch(`https://project-sync-dashboard-backend.onrender.com/employer/updateProject/${id}`, {
             method: "POST",
             mode: "cors",
             cache: "no-cache",
@@ -50,7 +50,7 @@ export const updateEmployeeProject= async (token,id,ProjectName,ProjectType,Proj
 
 export const updateTeacherProject= async (token,id,CourseName,NoOfStudentEnrolled,CourseType,CourseExpense,FromDate,ToDate,StatusOfTheCourse,OverallGradesInTheCourse,Priority)=>{
     try {
-        const response = await fetch(`http://localhost:5000/teacher/updateCourseDetails/${id}`, {
+        const response = await fetch(`https://project-sync-dashboard-backend.onrender.com/teacher/updateCourseDetails/${id}`, {
             method: "POST",
             mode: "cors",
             cache: "no-cache",
@@ -75,7 +75,7 @@ export const updateTeacherProject= async (token,id,CourseName,NoOfStudentEnrolle
 
 export const updateStudentProject= async (token,id,TeacherName,AssignmentName,Subject,CoursePrice,FromDate,ToDate,StatusOfTheAssignment,Grades,Priority)=>{
     try {
-        const response = await fetch(`http://localhost:5000/student/updateProject/${id}`, {
+        const response = await fetch(`https://project-sync-dashboard-backend.onrender.com/student/updateProject/${id}`, {
             method: "POST",
             mode: "cors",
             cache: "no-cache",

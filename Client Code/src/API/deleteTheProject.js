@@ -1,6 +1,6 @@
 export const deletionOfEmployeerProject= async (token,id)=>{
     try {
-        const response = await fetch(`http://localhost:5000/project/deleteTheProject/${id}`, {
+        const response = await fetch(`https://project-sync-dashboard-backend.onrender.com/project/deleteTheProject/${id}`, {
             method: "DELETE",
             mode: "cors",
             cache: "no-cache",
@@ -24,7 +24,7 @@ export const deletionOfEmployeerProject= async (token,id)=>{
 
 export const deletionOfEmployeeProject= async (token,id)=>{
     try {
-        const response = await fetch(`http://localhost:5000/employer/deleteTheProject/${id}`, {
+        const response = await fetch(`https://project-sync-dashboard-backend.onrender.com/employer/deleteTheProject/${id}`, {
             method: "DELETE",
             mode: "cors",
             cache: "no-cache",
@@ -49,7 +49,7 @@ export const deletionOfEmployeeProject= async (token,id)=>{
 
 export const deletionOfTeacherProject= async (token,id)=>{
     try {
-        const response = await fetch(`http://localhost:5000/teacher/removeTheCourse/${id}`, {
+        const response = await fetch(`https://project-sync-dashboard-backend.onrender.com/teacher/removeTheCourse/${id}`, {
             method: "DELETE",
             mode: "cors",
             cache: "no-cache",
@@ -74,7 +74,7 @@ export const deletionOfTeacherProject= async (token,id)=>{
 
 export const deletionOfStudentProject= async (token,id)=>{
     try {
-        const response = await fetch(`http://localhost:5000/student/deleteTheProject/${id}`, {
+        const response = await fetch(`https://project-sync-dashboard-backend.onrender.com/student/deleteTheProject/${id}`, {
             method: "DELETE",
             mode: "cors",
             cache: "no-cache",

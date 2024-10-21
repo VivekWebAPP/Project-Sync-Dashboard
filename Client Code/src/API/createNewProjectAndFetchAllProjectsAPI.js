@@ -1,6 +1,6 @@
 export const newEmployeerProject= async (token,CompanyName,ProjectName,ProjectType,ProjectPrice,ProjectBudget,FromDate,ToDate,StatusOfTheProject,Location,Priority)=>{
     try {
-        const response = await fetch(`http://localhost:5000/project/createNewProject`, {
+        const response = await fetch(`https://project-sync-dashboard-backend.onrender.com/project/createNewProject`, {
             method: "POST",
             mode: "cors",
             cache: "no-cache",
@@ -25,7 +25,7 @@ export const newEmployeerProject= async (token,CompanyName,ProjectName,ProjectTy
 
 export const newEmployeeProject= async (token,ProjectName,ProjectType,ProjectPrice,Expenses,ExpensesName,Budget,AdditionalBudgetName,AdditionalBudget,FromDate,ToDate,StatusOfTheProject,Location,Priority)=>{
     try {
-        const response = await fetch(`http://localhost:5000/employer/createNewProject`, {
+        const response = await fetch(`https://project-sync-dashboard-backend.onrender.com/employer/createNewProject`, {
             method: "POST",
             mode: "cors",
             cache: "no-cache",
@@ -50,7 +50,7 @@ export const newEmployeeProject= async (token,ProjectName,ProjectType,ProjectPri
 
 export const newTeacherProject= async (token,CourseName,NoOfStudentEnrolled,CourseType,CourseExpense,CourseBudget,FromData,ToDate,StatusOfTheCourse,OverallGradesInTheCourse,Priority)=>{
     try {
-        const response = await fetch(`http://localhost:5000/teacher/createNewSubject`, {
+        const response = await fetch(`https://project-sync-dashboard-backend.onrender.com/teacher/createNewSubject`, {
             method: "POST",
             mode: "cors",
             cache: "no-cache",
@@ -75,7 +75,7 @@ export const newTeacherProject= async (token,CourseName,NoOfStudentEnrolled,Cour
 
 export const newStudentProject= async (token,TeacherName,AssignmentName,Subject,CoursePrice,ExpensesName,Expenses,Budget,AdditionalBudgetName,AdditionalBudget,FromDate,ToDate,StatusOfTheAssignment,Grades,Priority)=>{
     try {
-        const response = await fetch(`http://localhost:5000/student/createANewAssignment`, {
+        const response = await fetch(`https://project-sync-dashboard-backend.onrender.com/student/createANewAssignment`, {
             method: "POST",
             mode: "cors",
             cache: "no-cache",
@@ -100,7 +100,7 @@ export const newStudentProject= async (token,TeacherName,AssignmentName,Subject,
 
 export const fetchAllEmployeerProjects = async (token)=>{
     try {
-        const response = await fetch(`http://localhost:5000/project/getAllData`,{
+        const response = await fetch(`https://project-sync-dashboard-backend.onrender.com/project/getAllData`,{
             method: "GET",
             mode: "cors",
             cache: "no-cache",
@@ -124,7 +124,7 @@ export const fetchAllEmployeerProjects = async (token)=>{
 
 export const fetchAllEmployeeProjects = async (token)=>{
     try {
-        const response = await fetch(`http://localhost:3000/employer/getAllData`,{
+        const response = await fetch(`https://project-sync-dashboard-backend.onrender.com/employer/getAllData`,{
             method: "GET",
             mode: "cors",
             cache: "no-cache",
@@ -148,7 +148,7 @@ export const fetchAllEmployeeProjects = async (token)=>{
 
 export const fetchAllTeacherCourses = async (token)=>{
     try {
-        const response = await fetch(`http://localhost:5000/teacher/getAllSubjects`,{
+        const response = await fetch(`https://project-sync-dashboard-backend.onrender.com/teacher/getAllSubjects`,{
             method: "GET",
             mode: "cors",
             cache: "no-cache",
@@ -172,7 +172,7 @@ export const fetchAllTeacherCourses = async (token)=>{
 
 export const fetchAllStudentsAssignments = async (token)=>{
     try {
-        const response = await fetch(`http://localhost:5000/student/getAllAssignments`,{
+        const response = await fetch(`https://project-sync-dashboard-backend.onrender.com/student/getAllAssignments`,{
             method: "GET",
             mode: "cors",
             cache: "no-cache",

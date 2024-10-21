@@ -1,6 +1,6 @@
 export const signUpToken = async (name,profession,email,password,country) => {
     try {
-        const response = await fetch(`http://localhost:5000/auth/createNewUser`, {
+        const response = await fetch(`https://project-sync-dashboard-backend.onrender.com/auth/createNewUser`, {
             method: "POST",
             mode: "cors",
             cache: "no-cache",
@@ -23,7 +23,7 @@ export const signUpToken = async (name,profession,email,password,country) => {
 
 export const loginToken = async (name,email,password) => {
     try {
-        const response = await fetch(`http://localhost:5000/auth/verifyUser`, {
+        const response = await fetch(`https://project-sync-dashboard-backend.onrender.com/auth/verifyUser`, {
             method: "POST",
             mode: "cors",
             cache: "no-cache",
@@ -46,7 +46,7 @@ export const loginToken = async (name,email,password) => {
 
 export const userDetails= async (token)=>{
     try {
-        const response = await fetch(`http://localhost:5000/auth/personalDetails`, {
+        const response = await fetch(`https://project-sync-dashboard-backend.onrender.com/auth/personalDetails`, {
             method: "GET",
             mode: "cors",
             cache: "no-cache",
